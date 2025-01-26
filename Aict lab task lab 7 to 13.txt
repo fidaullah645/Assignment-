@@ -1,0 +1,337 @@
+///lab 7 task 1
+/*#include <iostream>
+using namespace std;
+int main() {
+    cout << "Hello, my name is fidaullah" << endl;
+    return 0;
+}
+/////////////2////////////
+#include <iostream>
+using namespace std;
+int main() {
+ 
+    cout << "***** " << endl;
+    cout << "*     " << endl;
+    cout << "***** " << endl;
+    cout << "*     " << endl;
+    cout << "*     " << endl;
+    cout << endl;
+    cout << "***** " << endl;
+    cout << "  *   " << endl;
+    cout << "  *   " << endl;
+    cout << "  *   " << endl;
+    cout << "***** " << endl;
+    cout << endl;
+    cout << "***** " << endl;
+    cout << "*   * " << endl;
+    cout << "*   * " << endl;
+    cout << "*   * " << endl;
+    cout << "***** " << endl;
+    cout << endl;
+    cout << "  *   " << endl;
+    cout << " * *  " << endl;
+    cout << "***** " << endl;
+    cout << "*   * " << endl;
+    cout << "*   * " << endl;
+
+    return 0;
+}
+///////////////////////////////////////////////////////
+#include <iostream>
+#include <string>
+#include <iomanip>
+using namespace std;
+
+int main() {
+    string name = "fidaullah";
+    int studentID = 70179139;
+    string department = "Computer Science";
+    int age = 20;
+    float gpa = 3.75;
+    cout << "Student Profile Information" << endl;
+    cout << "----------------------------" << endl;
+    cout << "Name        : " << name << endl;
+    cout << "Student ID  : " << studentID << endl;
+    cout << "Department  : " << department << endl;
+    cout << "Age         : " << age << endl;
+    cout << "GPA         : " << fixed << setprecision(2) << gpa << endl;
+
+    return 0;
+}
+////////////////////////////////////////////////////////////////////////////////
+//Lab 8 tasks
+#include <iostream>
+using namespace std;
+int main() {
+    int number1 = 10, number2 = 20;
+    int answer = number1 + number2;
+    cout << "The sum of " << number1 << " and " << number2 << " is " << answer << endl;
+    return 0;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Enter first number ";
+    int number1;
+    cin >> number1;
+    cout << "Enter second number ";
+    int number2;
+    cin >> number2;
+    int sum = number1 + number2;
+    cout << "The sum of " << number1 << " and " << number2 << " is " << sum << endl;
+    return 0;
+}
+//////////////////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+    cout << "Enter value in USD ";
+    float usd;
+    cin >> usd;
+    float pkr = usd * 270;
+    cout << "The value in PKR is " << pkr << endl;
+    return 0;
+}
+//////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+
+int main() {
+    int number, sum = 0;
+    cout << "Enter a 4-digit number: ";
+    cin >> number;
+    while (number != 0) {
+        sum += number % 10;  
+        number = number / 10;
+    }
+    cout << "The sum of the digits is " << sum << endl;
+
+    return 0;
+}
+///////////////////////////////////////////////////////////////////
+////LAB  9 tasks///////////
+#include <iostream>
+using namespace std;
+int main() {
+
+    int num;
+    cout << "Enter an integer ";
+    cin >> num;
+    if (num % 2 == 0) {
+        cout << num << " is even" << endl;
+    }
+    else {
+        cout << num << " is odd" << endl;
+    }
+
+    return 0;
+}
+////////////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+int main() {
+    int num1, num2;
+    cout << "Enter first integer: ";
+    cin >> num1;
+    cout << "Enter second integer: ";
+    cin >> num2;
+    if (num1 > num2) {
+        cout << "The larger number is " << num1 << endl;
+    }
+    else if (num2 > num1) {
+        cout << "The larger number is " << num2 << endl;
+    }
+    else {
+        cout << "Both numbers are equal" << endl;
+    }
+
+    return 0;
+}
+///////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+int main() {
+    double amount, discount, finalAmount;
+    cout << "Enter the total shopping amount in Rs ";
+    cin >> amount;
+    if (amount <= 5000) {
+        discount = 0.05 * amount; 
+    }
+    else {
+        discount = 0.10 * amount;  
+    }
+    finalAmount = amount - discount;
+    cout << "Discount: Rs " << discount << endl;
+    cout << "Final amount after discount Rs " << finalAmount << endl;
+    return 0;
+}
+////////////////////////////////////////////////////////////////
+#include <iostream>
+#include <string> 
+using namespace std;
+int main() {
+    double num1, num2, result;
+    string op;
+    cout << "Enter the first number: ";
+    cin >> num1;
+    cout << "Enter the operator (+, -, *, /, %): ";
+    cin >> op;
+    cout << "Enter the second number: ";
+    cin >> num2;
+    if (op == "+") {
+        result = num1 + num2;
+    }
+    else if (op == "-") {
+        result = num1 - num2;
+    }
+    else if (op == "*") {
+        result = num1 * num2;
+    }
+    else if (op == "/") {
+        if (num2 != 0) {
+            result = num1 / num2;
+        }
+        else {
+            cout << "Error Division by zero is not allowed" << endl;
+            return 1;
+        }
+    }
+    else if (op == "%") {
+        if (num2 != 0) {
+            result = (int)num1 % (int)num2;
+        }
+        else {
+            cout << "Error Modulus by zero is not allowed" << endl;
+            return 1; 
+        }
+    }
+    else {
+        cout << "Error Invalid operator" << endl;
+        return 1;
+    }
+    cout << "Result " << result << endl;
+
+    return 0;
+}
+////////////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main() {
+    int age, monthlyIncome, loanAmount;
+    string existingLoanStatus, defaultStatus;
+    cout << "Enter your age: ";
+    cin >> age;
+    cout << "Enter your monthly income ";
+    cin >> monthlyIncome;
+    cout << "Enter the loan amount requested ";
+    cin >> loanAmount;
+    cout << "Do you have an existing loan? (yes/no) ";
+    cin >> existingLoanStatus;
+    cout << "Have you defaulted in the last 3 years? (yes/no) ";
+    cin >> defaultStatus;
+    if (age < 21 || age > 60) {
+        cout << "Loan eligibility Rejected (Age must be between 21 and 60)" << endl;
+    }
+    else if (existingLoanStatus == "yes" || defaultStatus == "yes") {
+        cout << "Loan eligibility Rejected (Existing loan or default in the last 3 years)" << endl;
+    }
+    else if (loanAmount > 500000) {
+        if (monthlyIncome > 40000) {
+            cout << "Loan eligibility: Approved" << endl;
+        }
+        else {
+            cout << "Loan eligibility Rejected (Monthly income must be greater than Rs. 40,000)" << endl;
+        }
+    }
+    else {
+        if (monthlyIncome > 25000) {
+            cout << "Loan eligibility Approved" << endl;
+        }
+        else {
+            cout << "Loan eligibility Rejected (Monthly income must be greater than Rs. 25,000)" << endl;
+        }
+    }
+    return 0;
+
+}
+/////////////////////////////////////////////////////////////////////////////////////////////
+//////////lab 12///////////
+#include <iostream>
+using namespace std;
+
+int main() {
+    // Declare variables for the three sides
+    float a, b, c;
+    cout << "Enter the first side of the triangle ";
+    cin >> a;
+    cout << "Enter the second side of the triangle ";
+    cin >> b;
+    cout << "Enter the third side of the triangle ";
+    cin >> c;
+    if (a + b > c && a + c > b && b + c > a) {
+        if (a == b && b == c) {
+            cout << "The triangle is Equilateral" << endl;
+        }
+        else if (a == b || b == c || a == c) {
+            cout << "The triangle is Isosceles" << endl;
+        }
+        else {
+            cout << "The triangle is Scalene" << endl;
+        }
+    }
+    else {
+        cout << "The sides do not form a valid triangle" << endl;
+    }
+
+    return 0;
+}
+/////////////////////////////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+int main() {
+    int num;
+    cout << "Enter a number ";
+    cin >> num;
+    (num % 2 == 0) ? cout << "The number is even." << endl :
+        cout << "The number is odd." << endl;
+
+    return 0;
+}
+
+////////////////////////////////////////////////////////////////////
+#include <iostream>
+using namespace std;
+int main() {
+    int a, b, c;
+    cout << "Enter the first number ";
+    cin >> a;
+    cout << "Enter the second number ";
+    cin >> b;
+    cout << "Enter the third number ";
+    cin >> c;
+    if (a >= b) {
+        if (a >= c) {
+            cout << "The largest number is " << a << endl;
+        }
+        else {
+            cout << "The largest number is " << c << endl;
+        }
+    }
+    else {
+        if (b >= c) {
+            cout << "The largest number is " << b << endl;
+        }
+        else {
+            cout << "The largest number is " << c << endl;
+        }
+    }
+
+    return 0;
+}*/
